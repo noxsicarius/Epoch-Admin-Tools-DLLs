@@ -36,8 +36,8 @@ void __stdcall RVExtension(char *output, int outputSize, char *function)
 		   << "\t\t\t\t\t\t\t Start of a new base\n"
 		   << "\t\t\t**************************************************/\n\n\n";
 
-	myfile << "\t[\n\t\t\"BASENAME\"//Name the base,\n"
-		   << "\t\t\"DISPLAY NAME\"//give it a display name,\n"
+	myfile << "\t[\n\t\t\"BASENAME\", //Name the base\n"
+		   << "\t\t\"DISPLAY NAME\", //give it a display name\n"
 		   << "\t\t[0,23,0], //This is the distance the base will spawn from you\n"
 		   << "\t\t[\n";
 
@@ -47,6 +47,6 @@ void __stdcall RVExtension(char *output, int outputSize, char *function)
 		p = strtok(NULL, "$$");
 	}
 
-	myfile << "\n\t\t]\n\t]\n\n\n";
+	myfile << "\t\t]\n\t]\n\n\n";
 	myfile.close();
 }
